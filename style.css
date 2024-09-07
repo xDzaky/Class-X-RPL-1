@@ -6,7 +6,19 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* --> Hiraukan <-- */
+/* material-item */
+/* task-item */
+
+html,body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
@@ -16,6 +28,7 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 /* Header */
@@ -72,11 +85,31 @@ nav ul li a i {
     font-size: 1.2rem;
 }
 
+/* Animasi Hero Section */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2, .hero p {
+    animation: slideUp 1s ease-in-out forwards;
+    opacity: 0;
+}
+
 /* Features Section */
 .features {
     padding: 50px 0;
     background: #1f1f1f;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .feature-item {
@@ -109,12 +142,17 @@ nav ul li a i {
     color: #dddddd;
 }
 
+.feature-item {
+
+}
+
 /* Footer */
 footer {
     background: #1a1a1a;
     padding: 20px 0;
     text-align: center;
     color: #ffffff;
+    margin-top: auto;
 }
 
 footer p {
@@ -122,9 +160,18 @@ footer p {
 }
 
 /* Hover Effects */
-nav ul li a:hover i, .feature-item i:hover {
-    color: #14ffec;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -181,12 +228,17 @@ nav ul li a:hover i, .feature-item i:hover {
 .content h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
+    animation: slideUp 1s ease-in-out forwards;
+    opacity: 0;
 }
 
 .material-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .material-item {
@@ -225,6 +277,7 @@ nav ul li a:hover i, .feature-item i:hover {
     color: #14ffec;
 }
 
+
 /* Responsive Styles for Material List */
 @media (max-width: 768px) {
     .material-item {
@@ -246,6 +299,9 @@ nav ul li a:hover i, .feature-item i:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .task-item {
@@ -256,6 +312,7 @@ nav ul li a:hover i, .feature-item i:hover {
     width: 30%;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 
 .task-item i {
     font-size: 3rem;
@@ -310,6 +367,9 @@ nav ul li a:hover i, .feature-item i:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .announcement-item {
@@ -358,6 +418,9 @@ nav ul li a:hover i, .feature-item i:hover {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .post-question form {
@@ -402,6 +465,9 @@ nav ul li a:hover i, .feature-item i:hover {
     background-color: #262626;
     padding: 20px;
     border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .question-item {
@@ -491,6 +557,9 @@ nav ul li a:hover i, .feature-item i:hover {
     margin: 0 auto;
     text-align: left;
     color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .contact-form form {
@@ -582,3 +651,31 @@ nav ul li a:hover i, .feature-item i:hover {
     color: #0b2e13; 
 }
 /* End Alert Kontak */
+
+/* Forum -> Isi Pertanyaan & Balas Pertanyaan*/
+#content {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#response {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/* Kontak -> Pesan */
+#message {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
