@@ -552,3 +552,33 @@ nav ul li a:hover i, .feature-item i:hover {
 }
 
 /* CSS Kontak End  */
+
+/* Alert Kontak */
+.alert {
+    padding: 15px;
+    background-color: #d4edda; 
+    color: #155724; 
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    border: 1px solid #c3e6cb;  
+    width: 520px;
+    display: none;
+}
+
+.alert .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #155724; 
+}
+
+.alert .close-btn:hover {
+    color: #0b2e13; 
+}
+/* End Alert Kontak */
