@@ -1,0 +1,554 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #00ffcc;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #0d7377, #14ffec);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background: #1f1f1f;
+    text-align: center;
+}
+
+.feature-item {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.feature-item p {
+    color: #dddddd;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Hover Effects */
+nav ul li a:hover i, .feature-item i:hover {
+    color: #14ffec;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .feature-item {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* CSS Materi */
+/* Content Section */
+.content {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.material-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.material-item {
+    background-color: #262626;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.material-item i {
+    font-size: 3rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.material-item h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.material-item a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.material-item:hover {
+    transform: translateY(-10px);
+    background-color: #333333;
+}
+
+.material-item a:hover {
+    color: #14ffec;
+}
+
+/* Responsive Styles for Material List */
+@media (max-width: 768px) {
+    .material-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .material-item {
+        width: 100%;
+    }
+}
+
+/* CSS Materi End */
+
+/* CSS Tugas */
+/* Task Section */
+.task-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.task-item {
+    background-color: #262626;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.task-item i {
+    font-size: 3rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.task-item h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.task-item p {
+    color: #dddddd;
+    margin-bottom: 15px;
+}
+
+.task-item a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-10px);
+    background-color: #333333;
+}
+
+.task-item a:hover {
+    color: #14ffec;
+}
+
+/* Responsive Styles for Task List */
+@media (max-width: 768px) {
+    .task-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-item {
+        width: 100%;
+    }
+}
+
+/* CSS Tugas End  */
+
+/* CSS Pengumuman  */
+/* Announcement Section */
+.announcement-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.announcement-item {
+    background-color: #262626;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.announcement-item h3 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.announcement-item p {
+    color: #dddddd;
+}
+
+.announcement-item:hover {
+    transform: translateY(-10px);
+    background-color: #333333;
+}
+
+/* Responsive Styles for Announcement List */
+@media (max-width: 768px) {
+    .announcement-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .announcement-item {
+        width: 100%;
+    }
+}
+
+/* CSS Pengumuman End  */
+
+/* CSS Forum */
+/* Forum Section */
+/* Forum Section */
+.post-question {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.post-question form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-question label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.post-question input,
+.post-question textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.post-question button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00ffcc;
+    color: #1f1f1f;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post-question button:hover {
+    background-color: #14ffec;
+    transform: translateY(-5px);
+}
+
+.questions-list {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.question-item {
+    margin-bottom: 30px;
+}
+
+.question-item h3 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.question-item p {
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+.responses {
+    margin-bottom: 20px;
+}
+
+.response-item {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.response-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.response-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.response-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00ffcc;
+    color: #1f1f1f;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.response-form button:hover {
+    background-color: #14ffec;
+    transform: translateY(-5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .post-question,
+    .questions-list {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-question,
+    .questions-list {
+        padding: 10px;
+    }
+
+    .post-question button,
+    .response-form button {
+        width: 100%;
+    }
+}
+
+/* CSS Forum End  */
+
+/* CSS Kontak */
+/* Contact Section */
+.contact-form {
+    background-color: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    color: #ffffff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #00ffcc;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00ffcc;
+    color: #1f1f1f;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #14ffec;
+    transform: translateY(-5px);
+}
+
+/* Responsive Styles for Contact Form */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+
+/* CSS Kontak End  */

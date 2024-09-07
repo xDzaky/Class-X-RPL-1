@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Digital Classroom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Forum Diskusi</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="materi.html"><i class="fas fa-book"></i> Materi</a></li>
+                    <li><a href="tugas.html"><i class="fas fa-tasks"></i> Tugas</a></li>
+                    <li><a href="pengumuman.html"><i class="fas fa-bell"></i> Pengumuman</a></li>
+                    <li><a href="#"><i class="fas fa-comments"></i> Forum</a></li>
+                    <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2>Forum Diskusi Siswa</h2>
+            <!-- Formulir untuk mengajukan pertanyaan -->
+            <div class="post-question">
+                <h3>Ajukan Pertanyaan</h3>
+                <form action="post-question.php" method="POST">
+                    <label for="title">Judul Pertanyaan</label>
+                    <input type="text" id="title" name="title" placeholder="Masukkan Judul Pertanyaan" required>
+                    
+                    <label for="content">Isi Pertanyaan</label>
+                    <textarea id="content" name="content" rows="5" placeholder="Tuliskan pertanyaan Anda di sini" required></textarea>
+
+                    <button type="submit">Kirim Pertanyaan</button>
+                </form>
+            </div>
+            <!-- Daftar pertanyaan dan balasan -->
+            <div class="questions-list">
+                <!-- Contoh pertanyaan -->
+                <div class="question-item">
+                    <h3>Bagaimana cara memahami kalkulus dasar?</h3>
+                    <p>Ditanya oleh <strong>John Doe</strong> pada <em>01 September 2024</em></p>
+                    <div class="responses">
+                        <div class="response-item">
+                            <p><strong>Jane Smith:</strong> Cobalah menggunakan video tutorial dan buku referensi yang tersedia. Ada banyak sumber online yang membantu pemahaman kalkulus.</p>
+                        </div>
+                    </div>
+                    <div class="response-form">
+                        <form action="post-response.php" method="POST">
+                            <input type="hidden" name="question_id" value="1">
+                            <label for="response">Balas Pertanyaan</label>
+                            <textarea id="response" name="response" rows="3" placeholder="Tuliskan balasan Anda di sini" required></textarea>
+                            <button type="submit">Kirim Balasan</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Tambahkan lebih banyak pertanyaan di sini -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Digital Classroom. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
