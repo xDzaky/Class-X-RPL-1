@@ -10,13 +10,19 @@
 <body>
     <header>
         <div class="container">
-            <h1>Kontak</h1>
-            <nav>
+            <div class="header-content">
+                <h1>Digital Classroom</h1>
+                <div class="navbar-bar" id="menuBar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <nav id="navbar">
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="materi.html"><i class="fas fa-book"></i> Materi</a></li>
                     <li><a href="tugas.html"><i class="fas fa-tasks"></i> Tugas</a></li>
                     <li><a href="pengumuman.html"><i class="fas fa-bell"></i> Pengumuman</a></li>
+                    <li><a href="forum.html"><i class="fas fa-comments"></i> Forum</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i> Kontak</a></li>
                 </ul>
             </nav>
@@ -58,6 +64,8 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxZuf8uALVVaMHuzpgxxMZYDryy1iSIqfZyORtiwdnkqA9hQ4AbhevzWR_LxOK5TFbWBw/exec'
     const form = document.forms['submit-to-google-sheet']
     const alertBox = document.getElementById('successAlert');
+    const menuBar = document.getElementById('menuBar');
+    const navbar = document.getElementById('navbar');
 
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -84,6 +92,14 @@
     function closeAlert() {
         alertBox.style.display = 'none';
     }
+
+    menuBar.addEventListener('click', function() {
+        if (navbar.style.display === 'block') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'block';
+        }
+    });
     </script>
 </body>
 </html>
