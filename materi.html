@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi Pelajaran - Digital Classroom</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Digital Classroom</h1>
-                <div class="navbar-bar" id="menuBar">
-                    <i class="fa-solid fa-bars"></i>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Materi Pelajaran - Digital Classroom</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+    <!-- Navbar -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <h1>Digital Classroom</h1>
+                    <div class="navbar-bar" id="menuBar">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Materi</a></li>
+                        <li><a href="tugas.html"><i class="fas fa-tasks"></i> Tugas</a></li>
+                        <li><a href="pengumuman.html"><i class="fas fa-bell"></i> Pengumuman</a></li>
+                        <li><a href="forum.html"><i class="fas fa-comments"></i> Forum</a></li>
+                        <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <!-- Navbar -->
+
+    <!-- Daftar Materi -->
+        <section class="content">
+            <div class="container">
+                <h2>Daftar Materi Pelajaran</h2>
+                <div class="material-list">
+                    <div class="material-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Matematika - Bab 1</h3>
+                        <a href="#">Unduh Materi</a>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Bahasa Indonesia - Bab 2</h3>
+                        <a href="#">Unduh Materi</a>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Ilmu Pengetahuan Alam - Bab 3</h3>
+                        <a href="#">Unduh Materi</a>
+                    </div>
                 </div>
             </div>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-book"></i> Materi</a></li>
-                    <li><a href="tugas.html"><i class="fas fa-tasks"></i> Tugas</a></li>
-                    <li><a href="pengumuman.html"><i class="fas fa-bell"></i> Pengumuman</a></li>
-                    <li><a href="forum.html"><i class="fas fa-comments"></i> Forum</a></li>
-                    <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </section>
+    <!-- End Daftar Materi -->
 
-    <section class="content">
-        <div class="container">
-            <h2>Daftar Materi Pelajaran</h2>
-            <div class="material-list">
-                <div class="material-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <h3>Matematika - Bab 1</h3>
-                    <a href="#">Unduh Materi</a>
-                </div>
-                <div class="material-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <h3>Bahasa Indonesia - Bab 2</h3>
-                    <a href="#">Unduh Materi</a>
-                </div>
-                <div class="material-item">
-                    <i class="fas fa-file-pdf"></i>
-                    <h3>Ilmu Pengetahuan Alam - Bab 3</h3>
-                    <a href="#">Unduh Materi</a>
-                </div>
+    <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Digital Classroom. All Rights Reserved.</p>
             </div>
-        </div>
-    </section>
+        </footer>
+    <!-- End Footer -->
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Digital Classroom. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- JavaScript -->
+        <script>
+            const menuBar = document.getElementById('menuBar');
+            const navbar = document.getElementById('navbar');
 
-    <script>
-        const menuBar = document.getElementById('menuBar');
-        const navbar = document.getElementById('navbar');
-
-        menuBar.addEventListener('click', function() {
-            if (navbar.style.display === 'block') {
-                navbar.style.display = 'none';
-            } else {
-                navbar.style.display = 'block';
-            }
-        });
-    </script>
-</body>
+            menuBar.addEventListener('click', function() {
+                if (navbar.style.display === 'block') {
+                    navbar.style.display = 'none';
+                } else {
+                    navbar.style.display = 'block';
+                }
+            });
+        </script>
+    </body>
 </html>

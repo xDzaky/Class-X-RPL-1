@@ -10,6 +10,7 @@
 /* material-item */
 /* task-item */
 /* header-content */
+/* content */
 
 html,body {
     height: 100%;
@@ -26,7 +27,6 @@ html,body {
     background: #262626;
     border-radius: 5rem;
 }
-
 /* === END Scroll Bar === */
 
 body {
@@ -104,7 +104,6 @@ nav ul li a:hover {
     color: #00ffcc;
 }
 
-/* Navbar bar styling */
 .navbar-bar {
     display: none;
     cursor: pointer;
@@ -138,16 +137,16 @@ nav ul li a:hover {
         margin: 10px 0;
     }
 }
+/* End Header */
 
-
+    /* ===== Index ===== */
 /* Hero Section */
 .hero {
     background-image: url(/assets/gallery/gallery-6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 13rem 0;
+    padding: 16.5rem 0;
     text-align: center;
-    margin: 7rem 0 0 0;
 }
 
 .hero h2 {
@@ -178,7 +177,7 @@ nav ul li a:hover {
 
 /* Nama Siswa */
 #nama-siswa {
-    margin: 50px 0 50px 0;
+    margin: 30px 0 50px 0;
     background-color: #1f1f1f;
 }
 
@@ -190,10 +189,11 @@ nav ul li a:hover {
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     gap: 50px;
+    margin: 0 20px 0 20px;
 }
 
 .wrapper {
-    font-size: 13px;
+    font-size: 18px;
     border: 2px solid wheat;
     padding: 5px;
     width: 350px;
@@ -204,10 +204,10 @@ nav ul li a:hover {
 
 /* Galery */
 .gallery {
-    padding: 50px 0;
     background-color: #1f1f1f;
     color: #ffffff;
     text-align: center;
+    margin: 20px 40px;
 }
 
 .gallery h2 {
@@ -216,7 +216,7 @@ nav ul li a:hover {
     color: #00ffcc;
 }
 
-.gallery-grid {
+/* .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -242,7 +242,7 @@ nav ul li a:hover {
 
 .gallery-item:hover {
     transform: translateY(-10px);
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -376,9 +376,9 @@ nav ul li a:hover {
     }
 }
 
-/* CSS Materi */
 /* Content Section */
 .content {
+    margin-top: 7rem;
     padding: 50px 0;
     background-color: #1f1f1f;
     color: #ffffff;
