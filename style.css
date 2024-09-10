@@ -16,11 +16,24 @@ html,body {
     scroll-behavior: smooth;
 }
 
+/* === Scroll Bar === */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 5rem;
+}
+
+/* === END Scroll Bar === */
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #121212;
+    background-color: #1f1f1f;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -41,8 +54,13 @@ body {
 /* Header */
 header {
     background: #1a1a1a;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* display: none; */
 }
 
 /* Header content for flexbox */
@@ -124,9 +142,12 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(90deg, #0d7377, #14ffec);
-    padding: 100px 0;
+    background-image: url(/assets/gallery/gallery-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 13rem 0;
     text-align: center;
+    margin: 7rem 0 0 0;
 }
 
 .hero h2 {
@@ -155,9 +176,99 @@ nav ul li a:hover {
     opacity: 0;
 }
 
+/* Nama Siswa */
+#nama-siswa {
+    margin: 50px 0 50px 0;
+    background-color: #1f1f1f;
+}
+
+.slider {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    gap: 50px;
+}
+
+.wrapper {
+    font-size: 13px;
+    border: 2px solid wheat;
+    padding: 5px;
+    width: 350px;
+    text-align: center;
+}
+
+/* End Nama Siswa */
+
+/* Galery */
+.gallery {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ffcc;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* End Galery */
+
 /* Features Section */
 .features {
     padding: 50px 0;
+    display: flex;
     background: #1f1f1f;
     text-align: center;
     opacity: 0;
@@ -193,10 +304,6 @@ nav ul li a:hover {
 
 .feature-item p {
     color: #dddddd;
-}
-
-.feature-item {
-
 }
 
 /* Footer */
